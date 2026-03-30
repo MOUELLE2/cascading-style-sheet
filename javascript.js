@@ -9,3 +9,9 @@
          }
     });
 </script>
+
+<script>
+    function playvideo(){
+        document.getElementById("mavideo").play();
+    }
+</script>
