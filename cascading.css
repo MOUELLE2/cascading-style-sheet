@@ -3,7 +3,7 @@
        z-index: 0;
     }
 
-    body::before{
+    body::before{/*permet de ne pas agir directement sur le HTML*/
     left: 0;/*colle a gauche*/
     width: 100%;/*prend toute la largeur*/
     height: 100%;/*prend toute la hauteur*/
@@ -17,40 +17,66 @@
     background-attachment: fixed;/*l'image reste fixe lorsqu'on scroll*/
     }
 
-    .claire{
-        color: white;
+    .ani{
+        color: rgb(22, 20, 46);
+        display:inline-block;
+        padding: 12px 24px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: 0.4s;
+    }
+
+    .ani:hover{
+        background-color: rgb(160, 113, 56);
+        transform: translateY(-2px);
+    }
+
+    .ani:active{
+        transform: translateY(0px);
     }
 
     #menuparametre{
         position:absolute;
         top: 50px;
-        right: 10;
+        right: 1px;
         background-color: white;
         padding: 10px;
-        width: 150;
+        width: 220px;
+        text-align: left;
+        border-radius: 15px;
     }
     /*cacher le menu au debut*/
     .hidden{ /*classe qu'on peut ajouter a un elt*/
         display: none;
     }
-    /*ul=liste, liste-style enleve les pt devant les elts et padding:0; enleve les espaces par defaut*/
-    #menuparametre ul{
-        list-style: none;
-        padding: 0;
-    }
-    /*li=chaque elt de la liste, padding:8px; ajoute de l'espace autour du texte*/
-    #menuparametre li{
-        padding: 8px;
-        cursor: pointer;
-    }
+
     /*hover=quand la sourie passe sur l'elt*/
-    #menuparametre li:hover {
-        background-color: darkgoldenrod;
+    #menuparametre button:hover {
+        background-color: rgba(26, 25, 23, 0.495);
     }
     
     #para {
         text-align: right;
-        
+    }
+
+    #para button:hover{
+        background-color: rgba(26, 25, 23, 0.495);
+    }
+
+    #menutheme{
+        position:absolute;
+        top: 50px;
+        right: 1px;
+        background-color: rgba(21, 233, 28, 0.567);
+        padding: 10px;
+        width: 420px;
+        text-align: left;
+        border-radius: 15px;
+    }
+
+    /*cacher le menu au debut*/
+    .hidden{ /*classe qu'on peut ajouter a un elt*/
+        display: none;
     }
 
     #settings{
@@ -69,9 +95,13 @@
         anchor-name: --anchor-info;
     }
 
+    #theme{
+        anchor-name: --anchor-theme;
+    }
+
     .txt{
         text-align: center;
-        background-color: rgba(227, 235, 225, 0);
+        background-color: rgba(255, 255, 255, 0.019);
         margin: 100px;
     }
 
@@ -103,12 +133,48 @@ button {
     text-align: center;
 }
 
+#rech:hover{
+    background-color: rgba(169, 197, 192, 0.463);
+}
+
+#send{
+    text-align: center;
+}
+
+#send:hover{
+    background-color: rgba(169, 197, 192, 0.463);
+}
+
 #search{
     border-radius: 20px;
     width: 500px;
     height: 30px;
 }
 
-button :hover{
+button :hover{/*change le style lorsque la sourie passe sur le boutton*/
     background-color: blue;
+}
+
+.but{
+    text-align: left;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(17, 17, 113);
+    font-size: 30px;
+}
+
+#h2{
+    color: rgb(17, 10, 93);
+    font-size: 30px;
+}
+
+#h3{
+ color: rgb(15, 12, 106);   
+font-size: 25px;
+}
+
+.claire{
+    color: rgb(255, 255, 255);
 }
