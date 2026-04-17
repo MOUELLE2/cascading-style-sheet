@@ -74,6 +74,10 @@
         border-radius: 15px;
     }
 
+    #menutheme:hover{
+        background-color: rgb(208, 120, 25);
+    }
+
     /*cacher le menu au debut*/
     .hidden{ /*classe qu'on peut ajouter a un elt*/
         display: none;
@@ -178,3 +182,26 @@ font-size: 25px;
 .claire{
     color: rgb(255, 255, 255);
 }
+
+#aide{
+    color: rgb(22, 20, 46);
+        display:inline-block;
+        padding: 12px 24px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: 0.4s;
+       
+}
+
+ #aide:hover{
+        background-color: rgb(160, 113, 56);
+        transform: translateY(-2px);
+    }
+
+    #aide:active{
+        transform: translateY(0px);
+    }
+
+    .aide{
+         color: blue;
+    }
